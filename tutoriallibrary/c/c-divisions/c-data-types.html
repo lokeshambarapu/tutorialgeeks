@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>C-tutorialgeeks</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Tutorialgeeks</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="c-keywords-identifier.html">C Keywords & Identifier</a></li>
+              <li><a href="c-variables-constants.html">C Variables & Constants</a></li>
+              <li class="active"><a href="c-data-types.html">C Data Types</a></li>
+              <li><a href="c-input-output.html">C Input/Output</a></li>
+			   <li><a href="c-operators.html">C Operators</a></li>
+              <li><a href="c-introduction-examples.html">C Introduction Examples</a></li>
+           
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-7">
+		
+		
+		<div class="panel panel-default">
+           <div class="panel-body">
+			
+			<p><b>C Programming Data Types</b></p>
+
+<p>In C, variable(data) should be declared before it can be used in program. Data types are the keywords, which are used for assigning a type to a variable.</p>
+
+<p><b>Data types in C</b></p>
+<ol type="1">
+<li>Fundamental Data Types<ul>
+<li>Integer types</li>
+<li>Floating Type</li>
+<li>Character types</li></ul></li>
+<li>Derived Data Types<ul>
+<li>Arrays</li>
+<li>Pointers</li>
+<li>Structures</li>
+<li>Enumeration</li></ul></li></ol>
+<p><b>Syntax for declaration of a variable</b></p>
+<p><table class="table table-bordered"><tr><td>data_type variable_name;</td></tr></table></p>
+
+<p><b>Integer data types</b></p>
+<p>Keyword int is used for declaring the variable with integer type. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>int var1;</td></tr></table></p>
+
+<p>Here, <i><b>var1</b></i> is a variable of type integer.</p>
+
+<p>The size of int is either 2 bytes(In older PC's) or 4 bytes. If you consider an integer having size of 4 byte( equal to 32 bits), it can take 232 distinct states as: -231,-231+1, ...,-2, -1, 0, 1, 2, ..., 231-2, 231-1</p>
+
+<p>Similarly, int of 2 bytes, it can take 216 distinct states from -215 to 215-1. If you try to store larger number than 231-1, i.e,+2147483647 and smaller number than -231, i.e, -2147483648,  program will not run correctly.</p>
+
+<p><b>Floating types</b></p>
+<p>Variables of floating types can hold real values(numbers) such as: 2.34, -9.382 etc. Keywords either float or double is used for declaring floating type variable. For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>float var2;</p>
+<p>double var3;</p></td></tr></table></p>
+<p>Here, both <i><b>var2</b></i> and <i><b>var3</b></i> are floating type variables.</p>
+
+<p>In C, floating values can be represented in exponential form as well. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>float var3=22.442e2</td></tr></table></p>
+
+<p><b>Difference between float and double</b></p>
+<p>Generally the size of float(Single precision float data type) is 4 bytes and that of double(Double precision float data type) is 8 bytes. Floating point variables has a precision of 6 digits whereas the the precision of double is 14 digits.</p>
+
+<p><b>Note:</b> Precision describes the number of significant decimal places that a floating values carries.</p>
+
+<p><b>Character types</b></p>
+<p>Keyword char is used for declaring the variable of character type. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>char var4='h';</td></tr></table></p>
+
+<p>Here, <i><b>var4</b></i> is a variable of type character which is storing a character 'h'.</p>
+
+<p>The size of char is 1 byte. The character data type consists of ASCII characters. Each character is given a specific value. For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>For, 'a', value =97</p>
+<p>For, 'b', value=98</p>
+<p>For, 'A', value=65</p>
+<p>For, '&', value=33</p>
+<p>For, '2', value=49</p></td></tr></table></p>
+<p>Here is the list of all ASCII characters in C language.</p>
+
+<p><b>Qualifiers</b></p>
+<p>Qualifiers alters the meaning of base data types to yield a new data type.</p>
+
+<p><b>Size qualifiers:</b></p>
+
+<p>Size qualifiers alters the size of basic data type. The keywords long and short are two size qualifiers. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>long int i;</td></tr></table></p>
+
+<p>The size of int is either 2 bytes or 4 bytes but, when long keyword is used, that variable will be either 4 bytes of 8 bytes. Learn more about long keyword in C programming. If the larger size of  variable is not needed then, short keyword can be used in similar manner as long keyword.</p>
+
+<p><b>Sign qualifiers:</b></p>
+
+<p>Whether a variable can hold only positive value or both values is specified by sign qualifiers. Keywords signed and unsigned are used for sign qualifiers.</p>
+
+<p><table class="table table-bordered"><tr><td>unsigned int a;
+<p>// unsigned variable can hold zero and positive values only </p></td></tr></table></p>
+</p>It is not necessary to define variable using keyword signed because, a variable is signed by default. Sign qualifiers can be applied to only int and char data types. For a int variable of size 4 bytes it can hold data from -231 to 231-1 but, if that variable is defined unsigned, it can hold data from 0 to 232 -1.</p>
+
+<p><b>Constant qualifiers</b></p>
+
+<p>Constant qualifiers can be declared with keyword const. An object declared by const cannot be modified.</p>
+
+<p><table class="table table-bordered"><tr><td>const int p=20;</td></tr></table></p>
+<p>The value of <i><b>p</b></i> cannot be changed in the program.</p>
+
+<p><b>Volatile qualifiers:</b></p>
+
+<p>A variable should be declared volatile whenever its value can be changed by some external sources outside program. Keyword volatile is used to indicate volatile variable.</p>
+    
+	
+	</div>
+	</div>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+	<script>
+          $(function(){
+            $('#sidebar').on('click','a',function(e){
+              e.preventDefault();
+              $($(this).attr('rel')).load($(this).attr('href'));
+            });
+          });
+        </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

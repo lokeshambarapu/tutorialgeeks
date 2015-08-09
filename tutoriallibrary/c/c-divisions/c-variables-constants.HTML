@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>C-tutorialgeeks</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">tutorialgeeks</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="c-keywords-identifier.html">C Keywords & Identifier</a></li>
+              <li class="active"><a href="c-variables-constants.html">C Variables & Constants</a></li>
+              <li><a href="c-data-types.html">C Data Types</a></li>
+              <li><a href="c-input-output.html">C Input/Output</a></li>
+			   <li><a href="c-operators.html">C Operators</a></li>
+              <li><a href="c-introduction-examples.html">C Introduction Examples</a></li>
+           
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-7">
+		
+		
+		<div class="panel panel-default">
+           <div class="panel-body">
+			
+			<p><b>C Programming Variables and Constants</b></p>
+
+<p><b>Variables</b></p>
+<p>Variables are memory location in computer's memory to store data. To indicate the memory location, each variable should be given a unique name called identifier. Variable names are just the symbolic representation of a memory location. Examples of variable name: <i>sum, car_no, count</i> etc.</p>
+
+ 
+
+<p><table class="table table-bordered"><tr><td>int <i>num</i>;</td></tr></table></p>
+<p>Here, <i>num</i> is a variable of integer type.</p>
+
+<p><b>Rules for writing variable name in C</b></p>
+<p><ol type="1">
+<li>Variable name can be composed of letters (both uppercase and lowercase letters), digits and underscore '_' only.</li>
+<li>The first letter of a variable should be either a letter or an underscore. But, it is discouraged to start variable name with an underscore though it is legal. It is because, variable name that starts with underscore can conflict with system names and compiler may complain.</li>
+<li>There is no rule for the length of length of a variable. However, the first 31 characters of  a variable are discriminated by the compiler. So, the first 31 letters of two variables in a program should be different.</li></ol></p>
+<p>In C programming, you have to declare variable before using it in the program.</p>
+
+<p><b>Constants</b></p>
+<p>Constants are the terms that can't be changed during the execution of a program. For example: 1, 2.5, "Programming is easy." etc. In C, constants can be classified as:</p>
+
+<p><b>Integer constants</b></p>
+<p>Integer constants are the numeric constants(constant associated with number) without any fractional part or exponential part. There are three types of integer constants in C language: decimal constant(base 10), octal constant(base 8) and hexadecimal constant(base 16) .</p>
+
+<p>Decimal digits: 0 1 2 3 4 5 6 7 8 9</p>
+
+<p>Octal digits: 0 1 2 3 4 5 6 7</p>
+
+<p>Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F.</p>
+
+<p>For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>Decimal constants: 0, -9, 22 etc</p>
+<p>Octal constants: 021, 077, 033 etc</p>
+<p>Hexadecimal constants: 0x7f, 0x2a, 0x521 etc</p></td></tr></table></p>
+<p><u>Notes:</u></p>
+<ol type="1">
+<li>You can use small caps a, b, c, d, e, f instead of uppercase letters while writing a hexadecimal constant.</li>
+<li>Every octal constant starts with 0 and hexadecimal constant starts with 0x in C programming.</li></ol>
+<p><b>Floating-point constants</b></p>
+<p>Floating point constants are the numeric constants that has either fractional form or exponent form.</p><p> For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>-2.0</p>
+<p>0.0000234</p>
+<p>-0.22E-5</p></td></tr></table></p>
+<p><b>Note:</b>Here, E-5 represents 10-5. Thus, -0.22E-5 = -0.0000022.</p>
+
+<p><b>Character constants</b></p>
+<p>Character constants are the constant which use single quotation around characters. For example: 'a', 'l', 'm', 'F' etc.</p>
+
+<p><b>Escape Sequences</b></p>
+<p>Sometimes, it is necessary to use newline(enter), tab, quotation mark etc. in the program which either cannot be typed or has special meaning in C programming. In such cases, escape sequence are used. For example: \n is used for newline. The backslash( \ ) causes "escape" from the normal way the characters are interpreted by the compiler.</p>
+
+<p align="center">Escape Sequences</p>
+<p><table class="table table-bordered"><tr><th>Escape Sequences</th><th>Character</th></tr>
+<tr><td>\b</td><td>Backspace</td></tr> 
+<tr><td>\f</td><td>Form feed</td></tr>	
+<tr><td>\n</td><td>Newline</td></tr>	
+<tr><td>\r</td><td>Return</td></tr>	
+<tr><td>\t</td><td>Horizontal tab</td></tr>	
+<tr><td>\v</td><td>Vertical tab</td></tr>	
+<tr><td>\\</td><td>Backslash</td></tr>	
+<tr><td>\'</td><td>Single quotation mark</td></tr>	
+<tr><td>\"</td><td>Double quotation mark</td></tr>	
+<tr><td>\?</td><td>Question mark</td></tr>	
+<tr><td>\0</td><td>Null character</td></tr></table></p>
+<p><b>String constants</b></p>
+<p>String constants are the constants which are enclosed in a pair of double-quote marks. For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>"good"    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         //string constant</p>
+<p>""    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            //null string constant</p>
+<p>"    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  "     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         //string constant of six white space</p>
+<p>"x"      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            //string constant having single character.</p>
+<p>"Earth is round\n"  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        //prints string with newline</p></td></tr></table></p>
+<p><b>Enumeration constants</b></p>
+<p>Keyword enum is used to declare enumeration types. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>enum color {yellow, green, black, white};</td></tr></table></p>
+<p>Here, the variable name is color and yellow, green, black and white are the enumeration constants having value 0, 1, 2 and 3 respectively by default. For more information about enumeration, visit page: Enumeration Types.</p>
+          
+    
+	
+	</div>
+	</div>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+	<script>
+          $(function(){
+            $('#sidebar').on('click','a',function(e){
+              e.preventDefault();
+              $($(this).attr('rel')).load($(this).attr('href'));
+            });
+          });
+        </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>C-tutorialgeeks</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">tutorialgeeks</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="c-keywords-identifier.html">C Keywords & Identifier</a></li>
+              <li><a href="c-variables-constants.html">C Variables & Constants</a></li>
+              <li><a href="c-data-types.html">C Data Types</a></li>
+              <li><a href="c-input-output.html">C Input/Output</a></li>
+			   <li class="active"><a href="c-operators.html">C Operators</a></li>
+              <li><a href="c-introduction-examples.html">C Introduction Examples</a></li>
+           
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-7">
+		
+		
+		<div class="panel panel-default">
+           <div class="panel-body">
+			<p><b>C Programming Operators</b></p>
+
+<p>Operators are the symbol which operates on value or a variable. For example: <b><i>+</i></b> is a operator to perform addition.</p>
+
+<p>C programming language has wide range of operators to perform various operations. For better understanding of operators, these operators can be classified as:</p>
+
+<p><table class="table table-bordered"><tr><th><p align="center">Operators in C programming</p></th></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Arithmetic Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Increment and Decrement Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Assignment Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Relational Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Logical Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Conditional Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Bitwise Operators</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Special Operators</td></tr></table></p>
+<p><b>Arithmetic Operators</b></p>
+<p><table class="table table-bordered"><tr><th>Operator</th><th>Meaning of Operator</th></tr>
+<tr><td>+</td><td>addition or unary plus</td></tr>
+<tr><td>-</td><td>subtraction or  unary minus</td></tr>
+<tr><td>*</td><td>multiplication</td></tr>
+<tr><td>/</td><td>division</td></tr>
+<tr><td>%</td><td>remainder after division( modulo division)</td></tr></table></p>
+<p>Example of working of arithmetic operators</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>/* Program to demonstrate the working of arithmetic operators in C.&nbsp;&nbsp;  */</p>
+<p>#include <stdio.h></p>
+<p>int main(){</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     int a=9,b=4,c;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    c=a+b;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("a+b=%d\n",c);</p>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     c=a-b;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("a-b=%d\n",c);</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     c=a*b;</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("a*b=%d\n",c);</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    c=a/b;</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("a/b=%d\n",c);</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    c=a%b;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("Remainder when a divided by b=%d\n",c);</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><table class="table table-bordered"><tr><td><p>a+b=13</p>
+<p>a-b=5</p>
+<p>a*b=36</p>
+<p>a/b=2</p>
+<p>Remainder when a divided by b=1</p></td></tr></table></p>
+<p><b>Explanation</b></p>
+
+<p>Here, the operators +, - and * performed normally as you expected. In normal calculation, <b>9/4</b> equals to 2.25. But, the output is 2 in this program. It is because, a and b are both integers. So, the output is also integer and the compiler neglects the term after decimal point and shows answer 2 instead of 2.25. And, finally <b>a%b</b> is 1,i.e. ,when <b>a=9</b> is divided by <b>b=4</b>, remainder is 1.</p>
+
+<p><table class="table table-bordered"><tr><td><p>Suppose a=5.0, b=2.0, c=5 and d=2</p>
+<p>In C programming,</p>
+<p>a/b=2.5 </p>   
+<p>a/d=2.5</p>
+<p>c/b=2.5 </p>     
+<p>c/d=2</p></td></tr></table></p>
+<p><b>Note:</b> % operator can only be used with integers.</p>
+
+<p><b>Increment and decrement operators</b></p>
+<p>In C, <b>++</b> and -- are called increment and decrement operators respectively. Both of these operators are unary operators, i.e, used on single operand. <b>++</b> adds 1 to operand and -- subtracts 1 to operand respectively. For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>Let a=5 and b=10</p>
+<p>a++;&nbsp;&nbsp;&nbsp;&nbsp;  //a becomes 6</p>
+<p>a--; &nbsp;&nbsp;&nbsp;&nbsp; //a becomes 5</p>
+<p>++a; &nbsp;&nbsp;&nbsp;&nbsp; //a becomes 6</p>
+<p>--a; &nbsp;&nbsp;&nbsp;&nbsp; //a becomes 5 </p></td></tr></table></p>
+<p><b>Difference between ++ and -- operator as postfix and prefix</b></p>
+
+<p>When <b>i++</b> is used as prefix(like: <b>++var</b>), <b>++var</b> will increment the value of <b><i>var</i></b> and then return it but, if <b>++</b> is used as postfix(like: var++), operator will return the value of operand first and then only increment it. This can be demonstrated by an example:</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;    int c=2,d=2;</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;   printf("%d\n",c++); //this statement displays 2 then, only c incremented by 1 to 3.</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;   printf("%d",++c);   //this statement increments 1 to c then, only c is displayed. </p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;   return 0;</p>
+<p>}</p></td></tr></table></p>
+
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>2</p>
+<p>4</p></td></tr></table></p>
+<p><b>Assignment Operators</b></p>
+<p>The most common assignment operator is =. This operator assigns the value in right side to the left side. For example:</p>
+
+<p><table class="table table-bordered"><tr><td><p>var=5  //5 is assigned to var</p>
+<p>a=c;&nbsp;&nbsp;&nbsp;&nbsp;    //value of c is assigned to a</p>
+<p>5=c; &nbsp;&nbsp;&nbsp;&nbsp;   // Error! 5 is a constant.</p></td></tr></table></p>
+<p><table class="table table-bordered"><tr><th>Operator</th><th>Example</th><th>Same as</th></tr>
+<tr><td>=</td><td>a=b</td><td>a=b</td></tr>
+<tr><td>+=</td><td>	a+=b</td><td>a=a+b</td></tr>
+<tr><td>-=</td><td>	a-=b</td><td>a=a-b</td></tr>
+<tr><td>*=</td><td>	a*=b</td><td>a=a*b</td></tr>
+<tr><td>/=</td><td>	a/=b</td><td>a=a/b</td></tr>
+<tr><td>%=</td><td>	a%=b</td><td>a=a%b</td></tr></table></p>
+<p><b>Relational Operator</b></p>
+<p>Relational operators checks relationship between two operands. If the relation is true, it returns value 1 and if the relation is false, it returns value 0. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>a&gt;b</td></tr></table></p>
+<p>Here, <b>&gt;</b> is a relational operator. If <b><i>a</i></b> is greater than <b><i>b</i></b>, <b><i>a&gt;b</i></b> returns 1 if not then, it returns 0.
+
+<p>Relational operators are used in decision making and loops in C programming.</p>
+
+<p><table class="table table-bordered"><tr><th>Operator</th><th>Meaning of Operator</th><th>Example</th></tr>
+<tr><td>==</td><td>	Equal to	</td><td>5==3 returns false (0)</td></tr>
+<tr><td>&gt;</td><td>	Greater than</td><td>	5&gt;3 returns true (1)</td></tr>
+<tr><td>&lt;</td><td>	Less than	</td><td>5&lt;3 returns false (0)</td></tr>
+<tr><td>!=</td><td>	Not equal to	</td><td>5!=3 returns true(1)</td></tr>
+<tr><td>&gt;=</td><td>	Greater than or equal to</td><td>	5&gt;=3 returns true (1)</td></tr>
+<tr><td>&lt;=</td><td>	Less than or equal to</td><td>	5&lt;=3 return false (0)</td></tr></table></p>
+<p><b>Logical Operators</b></p>
+<p>Logical operators are used to combine expressions containing relation operators. In C, there are 3 logical operators:</p>
+
+<p><table class="table table-bordered"><tr><th>Operator</th><th>Meaning of Operator</th><th>Example</th></tr>
+<tr><td>&&	</td><td>Logial AND </td><td>	If c=5 and d=2 then,((c==5) && (d&gt;5)) returns false.</td></tr>
+<tr><td>||	</td><td>Logical OR	</td><td>If c=5 and d=2 then, ((c==5) || (d&gt;5)) returns true.</td></tr>
+<tr><td>!	</td><td>Logical NOT</td><td>	If c=5 then, !(c==5) returns false.</td></tr></table></p>
+<p><b>Explanation</b></p>
+
+<p>For expression, <b><i>((c==5) && (d&gt;5)) </i></b>to be true, both <b><i>c==5</i></b> and <b><i>d>5</i></b> should be true but, (d&gt;5) is false in the given example. So, the expression is false. For expression <b>((c==5) || (d&gt;5))</b> to be true, either the expression should be true. Since, <b>(c==5)</b> is true. So, the expression is true. Since, expression <b>(c==5)</b> is true, <b>!(c==5)</b> is false.</p>
+
+<p><b>Conditional Operator</b></p>
+<p>Conditional operator takes three operands and consists of two symbols ? and : . Conditional operators are used for decision making in C. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>c=(c&gt;0)?10:-10;</td></tr></table></p>
+<p>If <b><i>c</i></b> is greater than 0, value of <b><i>c</i></b> will be 10 but, if <b><i>c</i></b> is less than 0, value of <b><i>c</i></b> will be -10.</p>
+
+<p><b>Bitwise Operators</b></p>
+<p>A bitwise operator works on each bit of data. Bitwise operators are used in bit level programming.</p>
+
+<p><table class="table table-bordered"><tr><th>Operators</th><th>Meaning of operators</th></tr>
+<tr><td>&amp;</td><td>	Bitwise AND</td></tr>
+<tr><td>|</td><td>	Bitwise OR</td></tr>
+<tr><td>^</td><td>	Bitwise exclusive OR</td></tr>
+<tr><td>~</td><td>	Bitwise complement</td></tr>
+<tr><td>&lt;&lt;	</td><td>Shift left</td></tr>
+<tr><td>&gt;&gt;</td><td>	Shift right</td></tr></table></p>
+<p>Bitwise operator is advance topic in programming . Learn more about bitwise operator in C programming.</p>
+
+<p><b>Other Operators</b></p>
+<p><b>Comma Operator</b></p>
+<p>Comma operators are used to link related expressions together. For example:</p>
+
+<p><table class="table table-bordered"><tr><td>int a,c=5,d;</td></tr></table></p>
+<p><b>The sizeof operator</b></p>
+<p>It is a unary operator which is used in finding the size of data type, constant, arrays, structure etc. For example:</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;  int a;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;   float b;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;  double c;</p>
+ <p>  &nbsp;&nbsp;&nbsp;&nbsp; char d;</p>
+ <p>  &nbsp;&nbsp;&nbsp;&nbsp; printf("Size of int=%d bytes\n",sizeof(a));</p>
+ <p>  &nbsp;&nbsp;&nbsp;&nbsp; printf("Size of float=%d bytes\n",sizeof(b));</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp; printf("Size of double=%d bytes\n",sizeof(c));</p>
+ <p>  &nbsp;&nbsp;&nbsp;&nbsp; printf("Size of char=%d byte\n",sizeof(d));</p>
+  <p> &nbsp;&nbsp;&nbsp;&nbsp; return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Size of int=4 bytes</p>
+<p>Size of float=4 bytes</p>
+<p>Size of double=8 bytes</p>
+<p>Size of char=1 byte</p></td></tr></table></p>
+<p><b>Conditional operators (?:)</b></p>
+<p>Conditional operators are used in decision making in C programming, i.e, executes different statements according to test condition whether it is either true or false.</p>
+
+<p><b>Syntax of conditional operators</b></p>
+<p><table class="table table-bordered"><tr><td>conditional_expression?expression1:expression2</td></tr></table></p>
+<p>If the test condition is true, <b>expression1</b> is returned and if false <b>expression2</b> is returned.</p>
+
+<p><b>Example of conditional operator</b></p>
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp; char feb;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp; int days;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp; printf("Enter l if the year is leap year otherwise enter 0: ");</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; scanf("%c",&amp;feb);</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; days=(feb=='l')?29:28;</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; /*If test condition (feb=='l') is true, days will be equal to 29. */</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; /*If test condition (feb=='l') is false, days will be equal to 28. */ </p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; printf("Number of days in February = %d",days);</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp; return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Enter l if the year is leap year otherwise enter n: l</p>
+<p>Number of days in February = 29</p></td></tr></table></p>
+<p>Other operators such as &amp;(reference operator), *(dereference operator) and -&gt;(member selection) operator will be discussed in pointer chapter.</p>
+			
+	
+	</div>
+	</div>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+	<script>
+          $(function(){
+            $('#sidebar').on('click','a',function(e){
+              e.preventDefault();
+              $($(this).attr('rel')).load($(this).attr('href'));
+            });
+          });
+        </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

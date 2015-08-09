@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>C-tutorialgeeks</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Tutorialgeeks</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li class="active"><a href="c-keywords-identifier.html">C Keywords & Identifier</a></li>
+              <li><a href="c-variables-constants.html">C Variables & Constants</a></li>
+              <li><a href="c-data-types.html">C Data Types</a></li>
+              <li><a href="c-input-output.html">C Input/Output</a></li>
+			   <li><a href="c-operators.html">C Operators</a></li>
+              <li><a href="c-introduction-examples.html">C Introduction Examples</a></li>
+           
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-7">
+		
+		
+		<div class="panel panel-default">
+           <div class="panel-body">
+			
+			<p><b>C Programming Keywords and Identifiers</b></p>
+
+			<p><b>Character set</b></p>
+			<p>Character set are the set of alphabets, letters and some special characters that are valid in C language.</p>
+
+			<p><b>Alphabets:</b></p> 
+
+			<p>Uppercase: A B C  ....................................  X Y Z</p> 
+
+			<p>Lowercase: a b c  ......................................  x y z</p>
+
+			<p><b>Digits:</b></p>
+
+			<p>0 1 2 3 4 5 6  8 9</p>
+
+			<p><b>Special Characters:</b></p>
+			<p align="center">Special Characters in C language</p>
+			<p><table class="table table-bordered"><tr><td>,</td><td>&lt;</td><td>&gt;</td><td>.</td><td>_</td><td>(</td><td>)</td><td>;</td><td>$</td><td>:</td><td>%</td><td>[</td><td>]</td><td>#</td><td>?</td></tr>
+			<tr><td>'</td><td>&amp;</td><td>{</td><td>}</td><td>"</td><td>^</td><td>!</td><td>*</td><td>/</td><td>|</td><td>-</td><td>\</td><td>~</td><td>+</td>></tr></table></p>	 
+			<p><b>White space Characters:</b></p>
+
+			<p>blank space, new line, horizontal tab, carriage return and form feed</p>
+
+			<p><b>Keywords:</b></p>
+			<p>Keywords are the reserved words used in programming. Each keywords has fixed meaning and that cannot be changed by user. For example:</p>
+
+			<p><table class="table table-bordered"><tr><td>int <b><i>money</i></b>;</td></tr></table></p>
+			<p>Here, int is a keyword that indicates, '<b><i>money</i></b>' is of type integer.</p>
+
+			<p>As, C programming is case sensitive, all keywords must be written in lowercase. Here is the list of all keywords predefined by ANSI C.</p>
+
+			<p align="center">Keywords in C Language</p>
+			<p><table class="table table-bordered"><tr><td>auto</td><td>double</td><td>int</td><td>struct></td><tr>
+			<tr><td>break</td><td>else</td><td>long</td><td>switch</td></tr>
+			<tr><td>case</td><td>enum</td><td>register</td><td>typedef</td></tr>
+			<tr><td>char</td><td>extern</td><td>return</td><td>union</td></tr>
+			<tr><td>continue</td><td>for</td><td>signed</td><td>void</td></tr>
+			<tr><td>do</td><td>if</td><td>static</td><td>while</td></tr>
+			<tr><td>default</td><td>goto</td><td>sizeof</td><td>volatile</td></tr>
+			<tr><td>const</td><td>float</td><td>short</td><td>unsigned</td></tr></table></p>
+			<p>Besides these keywords, there are some additional keywords supported by Turbo C.</p>
+
+			<p align="center">Additional Keywords for Borland C</p>
+			<p><table class="table table-bordered"><tr><td>asm</td><td>far</td><td>interrupt</td><td>pascal</td><td>near</td><td>huge</td><td>cdecl</td></tr></table></p>
+			<p>All these keywords, their syntax and application will be discussed in their respective topics. However, if you want brief information about these keywords without going further visit page: list of all C keywords.</p>
+
+			<p><b>Identifiers</b></p>
+			<p>In C programming, identifiers are names given to C entities, such as variables, functions, structures etc. Identifier are created to give unique name to C entities to identify it during the execution of program. For example:</p>
+
+			<p><table class="table table-bordered"><tr><td><p> int <b><i>money</i></b>;</p>
+			<p>int <b><i>mango_tree</i></b>;</p></td></tr></table></p>
+			<p>Here, <b><i>money</i></b> is a identifier which denotes a variable of type integer. Similarly, <b><i>mango_tree</i></b> is another identifier, which denotes another variable of type integer.</p>
+
+			<p><b>Rules for writing identifier</b></p>
+			<ol type="1">
+			<li>An identifier can be composed of letters (both uppercase and lowercase letters), digits and underscore '_' only.</li>
+			<li>The first letter of identifier should be either a letter or an underscore. But, it is discouraged to start an identifier name with an underscore though it is legal. It is because, identifier that starts with underscore can conflict with system names. In such cases, compiler will complain about it. Some system names that start with underscore are <b><i>_fileno, _iob, _wfopen</i></b> etc.</li>
+			<li>There is no rule for the length of an identifier. However, the first 31 characters of an identifier are discriminated by the compiler. So, the first 31 letters of two identifiers in a program should be different.</li></ol>
+			<p><b>Tips for Good Programming Practice :</b></p>
+
+			<p>Programmer can choose the name of identifier whatever they want. However, if the programmer choose meaningful name for an identifier, it will be easy to understand and work on, particularly in case of large program.</p>
+		   
+          
+    
+	
+	</div>
+	</div>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+	<script>
+          $(function(){
+            $('#sidebar').on('click','a',function(e){
+              e.preventDefault();
+              $($(this).attr('rel')).load($(this).attr('href'));
+            });
+          });
+        </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

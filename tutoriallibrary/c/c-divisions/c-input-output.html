@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>C-Tutorailgeeks</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">tutorialgeeks</a>
+    	</div>
+       </div>
+    </div>
+      
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li><a href="c-keywords-identifier.html">C Keywords & Identifier</a></li>
+              <li><a href="c-variables-constants.html">C Variables & Constants</a></li>
+              <li><a href="c-data-types.html">C Data Types</a></li>
+              <li class="active"><a href="c-input-output.html">C Input/Output</a></li>
+			   <li><a href="c-operators.html">C Operators</a></li>
+              <li><a href="c-introduction-examples.html">C Introduction Examples</a></li>
+           
+            </ul>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-7">
+		
+		
+		<div class="panel panel-default">
+           <div class="panel-body">
+			<p><b>C Programming Input Output (I/O)</b></p>
+
+<p>ANSI standard has defined many library functions for input and output in C language. Functions <b>printf()</b> and <b>scanf()</b> are the most commonly used to display out and take input respectively. Let us consider an example:</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      //This is needed to run printf() function.</p>
+<p>int main()</p>
+<p>{</p>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("C Programming"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  //displays the content inside quotation</p>
+ <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td>C Programming</td></tr></table></p>
+<p><b>Explanation of How this program works</b></p>
+<ol type="1">
+<li>Every program starts from main() function.</li>
+<li><b>printf()</b> is a library function to display output which only works if <b>#include<stdio.h></b>is included at the beginning.</li>
+<li>Here, <b>stdio.h</b> is a header file (standard input output header file) and <b>#include</b> is command to paste the code from the header file when necessary. When compiler encounters <b>printf()</b> function and doesn't find stdio.h header file, compiler shows error.</li>
+<li>Code return <b>0</b>; indicates the end of program. You can ignore this statement but, it is good programming practice to use <b>return 0</b>;.</li></ol>
+<p><b>I/O of integers in C</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>#include<stdio.h></p>
+<p>int main()</p>
+<p>{</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   int c=5;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Number=%d",c);</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td>Number=5</td></tr></table></p>
+<p>Inside quotation of <b>printf()</b> there, is a conversion format string <b>"%d"</b> (for integer). If this conversion format string matches with remaining argument,i.e, <b><i>c</i></b> in this case, value of <b><i>c</i></b> is displayed.</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include<stdio.h></p>
+<p>int main()</p>
+<p>{</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   int c;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("Enter a number\n");</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   scanf("%d",&amp;c);</p>  
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Number=%d",c);</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Enter a number</p>
+<p>4</p>
+<p>Number=4</p></td></tr></table></p>
+<p>The <b>scanf()</b> function is used to take input from user. In this program, the user is asked a input and value is stored in variable <b><i>c</i></b>. Note the '&amp;' sign before <b><i>c</i></b>. &amp;c denotes the address of <b><i>c</i></b> and value is stored in that address.</p>
+
+<p><b>I/O of floats in C</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  float a;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("Enter value: ");</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   scanf("%f",&amp;a);</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Value=%f",a);  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   //%f is used for floats instead of %d</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   return 0;</p>
+<p>}</p></td></tr></table></p>
+
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Enter value: 23.45</p>
+<p>Value=23.450000</p></td></tr></table></p>
+<p>Conversion format string <b>"%f"</b> is used for floats to take input and to display floating value of a variable.</p>
+
+<p><b>I/O of characters and ASCII code</b></p>
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   char var1;</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Enter character: ");</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   scanf("%c",&amp;var1);</p>     
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("You entered %c.",var1);  </p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Enter character:&nbsp; g</p>
+<p>You entered g.</p></td></tr></table></p>
+<p>Conversion format string <b>"%c"</b> is used in case of characters.</p>
+
+<p><b>ASCII code</b></p>
+<p>When character is typed in the above program, the character itself is not recorded a numeric value(ASCII value) is stored. And when we displayed that value by using <b>"%c"</b>, that character is displayed.</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  char var1;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Enter character: ");</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  scanf("%c",&amp;var1);</p>     
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  printf("You entered %c.\n",var1);  </p>
+<p>/*  &nbsp;&nbsp;\n prints the next line(performs work of enter).&nbsp;&nbsp; */</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  printf("ASCII value of %d",var1);  </p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Enter character:</p>
+<p>g</p>
+<p>103</p></td></tr></table></p>
+<p>When, <b><i>'g'</i></b> is entered, ASCII value 103 is stored instead of <b><i>g</i></b>.</p>
+
+<p>You can display character if you know ASCII code only. This is shown by following example.</p>
+
+
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    int var1=69;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Character of ASCII value 69: %c",var1);</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td>Character of ASCII value 69: E</td></tr></table></p>
+<p>The ASCII value of 'A' is 65, 'B' is 66 and so on to 'Z' is 90. Similarly ASCII value of 'a' is 97, 'b' is 98 and so on to 'z' is 122.</p>
+
+<p><a href="#">Click here to learn about complete reference of ASCII code.</a></p>
+
+<p><b>More about Input/Output of floats and Integer</b></p>
+<p><b>Variations in Output for integer an floats</b></p>
+<p>Integer and floating-points can be displayed in different formats in C programming as:</p>
+
+<p><table class="table table-bordered"><tr><td><p>#include<stdio.h></p>
+<p>int main(){</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Case 1:%6d\n",9876);  </p>    
+<p>/* &nbsp;&nbsp; Prints the number right justified within 6 columns &nbsp;&nbsp; */</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Case 2:%3d\n",9876);   </p>   
+<p>/*&nbsp;&nbsp; Prints the number to be right justified to 3 columns but, there are 4 digits so number is not right justified&nbsp;&nbsp;  */</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  printf("Case 3:%.2f\n",987.6543);</p>
+<p>/*&nbsp;&nbsp; Prints the number rounded to two decimal places&nbsp;&nbsp; */</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  printf("Case 4:%.f\n",987.6543);</p>
+<p>/* &nbsp;&nbsp;Prints the number rounded to 0 decimal place, i.e, rounded to integer &nbsp;&nbsp;*/</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  printf("Case 5:%e\n",987.6543);</p>
+<p>/*&nbsp;&nbsp; Prints the number in exponential notation(scientific notation)&nbsp;&nbsp; */</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   return 0;</p>
+<p>}</p></td></tr></table></p>
+<p><b>Output</b></p>
+
+<p><table class="table table-bordered"><tr><td><p>Case 1:  9876</p>
+<p>Case 2:9876</p>
+<p>Case 3:987.65</p>
+<p>Case 4:988</p>
+<p>Case 5:9.876543e+002</p></td></tr></table></p>
+<p><b>Variations in Input for integer and floats</b></p>
+<p><table class="table table-bordered"><tr><td><p>#include <stdio.h></p>
+<p>int main(){</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    int a,b;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     float c,d;</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("Enter two intgers: ");</p>
+<p>/*Two integers can be taken from user at once as below*/</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    scanf("%d%d",&amp;a,&amp;b);</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   printf("Enter intger and floating point numbers: ");</p>
+<p>/*Integer and floating point number can be taken at once from user as below*/</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   scanf("%d%f",&amp;a,&amp;c);</p>
+<p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return 0;</p>
+<p>}</p></td></tr></table></p>
+<p>Similarly, any number of input can be taken at once from user.</p>
+			
+	
+	</div>
+	</div>
+          
+        </div><!-- /.col-xs-12 main -->
+    </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+	<!-- script references -->
+	<script>
+          $(function(){
+            $('#sidebar').on('click','a',function(e){
+              e.preventDefault();
+              $($(this).attr('rel')).load($(this).attr('href'));
+            });
+          });
+        </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
